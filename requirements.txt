@@ -1,2 +1,4 @@
-graphviz
-Pillow
+tkinter>=8.6
+tkcalendar>=1.6.1
+pillow>=9.0.0
+graphviz>=0.20
