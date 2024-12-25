@@ -20,7 +20,7 @@
         "gender": "Female",
         "owned": true,
         "ownership_type": "Seed Start",
-        "clone_count": 0,
+        "clone_count": 1,
         "genetic_info": {}
     },
     "Jedi Kush #1": {
@@ -90,10 +90,10 @@
         "type": "Indica-dominant Hybrid",
         "notes": "High yield, good for trichome production",
         "gender": "Female",
-        "owned": false,
+        "owned": true,
         "ownership_type": "None",
-        "genetic_info": {},
-        "clone_count": 0
+        "clone_count": 0,
+        "genetic_info": {}
     },
     "Sensi Star": {
         "lineage": "Unknown",
@@ -144,7 +144,7 @@
         "clone_count": 0
     },
     "Gelato 41": {
-        "lineage": "Sunset Sherbet x Girl Scout Cookies",
+        "lineage": "Sunset Sherbert x Girl Scout Cookies",
         "yield": "1g",
         "flowering_time": "8-10 weeks",
         "type": "Hybrid",
@@ -239,18 +239,6 @@
         "genetic_info": {},
         "clone_count": 0
     },
-    "Sunset Sherbet": {
-        "lineage": "Girl Scout Cookies x Pink Panties",
-        "yield": "1g",
-        "flowering_time": "7-9 wks",
-        "type": "Hybrid",
-        "notes": "skunky citrus, sweet berry, and candy",
-        "gender": "Female",
-        "owned": false,
-        "ownership_type": "None",
-        "genetic_info": {},
-        "clone_count": 0
-    },
     "Girl Scout Cookies": {
         "lineage": "Durban Poison x OG Kush",
         "yield": "Unknown",
@@ -264,7 +252,7 @@
         "clone_count": 0
     },
     "Lemon Cherry Gelato": {
-        "lineage": "Sunset Sherbet x Girl Scout Cookies",
+        "lineage": "Sunset Sherbert x Girl Scout Cookies",
         "yield": "1g",
         "flowering_time": "8-10 weeks",
         "type": "Indica-dominant hybrid",
@@ -308,7 +296,7 @@
         "gender": "Female",
         "owned": true,
         "ownership_type": "Clone",
-        "clone_count": 2,
+        "clone_count": 4,
         "genetic_info": {}
     },
     "Durban Poison": {
@@ -416,7 +404,7 @@
         "gender": "Female",
         "owned": true,
         "ownership_type": "Clone",
-        "clone_count": 6,
+        "clone_count": 7,
         "genetic_info": {}
     },
     "Unknown": {
@@ -429,7 +417,7 @@
         "owned": false,
         "ownership_type": "None",
         "genetic_info": {},
-        "clone_count": 0
+        "clone_count": 1
     },
     "Animal Mints": {
         "lineage": "Unknown",
@@ -551,16 +539,244 @@
         "clone_count": 0,
         "genetic_info": {}
     },
-    "Gorilla Glue #4 Clone F": {
-        "lineage": "Gorilla Glue #4",
-        "yield": "Unknown",
+    "Bubba Kush": {
+        "lineage": "Unknown",
+        "yield": "1g",
         "flowering_time": "Unknown",
         "type": "Unknown",
         "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 2,
+        "genetic_info": {}
+    },
+    "Kush Mints": {
+        "lineage": "Bubba Kush x Animal Mints",
+        "yield": "1g",
+        "flowering_time": "9-10 wks",
+        "type": "Indica Hybrid",
+        "notes": "12/20/24",
         "gender": "Female",
         "owned": true,
         "ownership_type": "Clone",
         "clone_count": 0,
         "genetic_info": {}
+    },
+    "Zkittlez": {
+        "lineage": "Unknown",
+        "yield": "1g",
+        "flowering_time": "9-10 wks",
+        "type": "Indica Hybrid",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Pink Guava": {
+        "lineage": "Unknown",
+        "yield": "1g",
+        "flowering_time": "9-10 wks",
+        "type": "Indica Hybrid",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 2,
+        "genetic_info": {}
+    },
+    "Sunset Sherbert": {
+        "lineage": "Girl Scout Cookies x Pink Panties",
+        "yield": "1g",
+        "flowering_time": "7-9 wks",
+        "type": "Hybrid",
+        "notes": "skunky citrus, sweet berry, and candy",
+        "gender": "Female",
+        "owned": true,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "RS11": {
+        "lineage": "Pink Guava x Sunset Sherbert",
+        "yield": "1g",
+        "flowering_time": "9-10 wks",
+        "type": "Indica Hybrid",
+        "notes": "12/20/24",
+        "gender": "Female",
+        "owned": true,
+        "ownership_type": "Clone",
+        "clone_count": 0,
+        "genetic_info": {
+            "gwg": "hgwhgwh"
+        }
+    },
+    "Amherst Sour Dieael": {
+        "lineage": "Unknown x Unknown",
+        "yield": "1g",
+        "flowering_time": "9-11 wks",
+        "type": "Unknown",
+        "notes": "12/20/24",
+        "gender": "Female",
+        "owned": true,
+        "ownership_type": "Clone",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Pancakes": {
+        "lineage": "Unknown x Unknown",
+        "yield": "1g",
+        "flowering_time": "9-11 wks",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 2,
+        "genetic_info": {}
+    },
+    "Runtz": {
+        "lineage": "Zkittlez x Gelato 41",
+        "yield": "1g",
+        "flowering_time": "8-9 wks",
+        "type": "Hybrid",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Detroit Runtz": {
+        "lineage": "Pancakes x Runtz",
+        "yield": "1g",
+        "flowering_time": "60-65",
+        "type": "Hybrid",
+        "notes": "12/20/24",
+        "gender": "Female",
+        "owned": true,
+        "ownership_type": "Clone",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Katsu Cut": {
+        "lineage": "Unknown",
+        "yield": "1g",
+        "flowering_time": "Unknown",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Blue Bonnet": {
+        "lineage": "Unknown",
+        "yield": "1g",
+        "flowering_time": "Unknown",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Ice Cream Cake": {
+        "lineage": "Unknown",
+        "yield": "1g",
+        "flowering_time": "Unknown",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Sherb Cream Pie": {
+        "lineage": "Ice Cream Cake x Sunset Sherbert",
+        "yield": "1g",
+        "flowering_time": "Unknown",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Female",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "DJ Short Bluberry": {
+        "lineage": "Unknown",
+        "yield": "1g",
+        "flowering_time": "Unknown",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Unknown",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Bluberry IX": {
+        "lineage": "DJ Short Bluberry x Blue Bonnet",
+        "yield": "1g",
+        "flowering_time": "7-9 wks",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Unknown",
+        "owned": false,
+        "ownership_type": "None",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Peaberry": {
+        "lineage": "Katsu Cut x Blue Bonnet",
+        "yield": "1g",
+        "flowering_time": "Unknown",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Unknown",
+        "owned": true,
+        "ownership_type": "Seed Start",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "Bluekkake": {
+        "lineage": "Sherb Cream Pie x Bluberry IX",
+        "yield": "1g",
+        "flowering_time": "8 wks",
+        "type": "Unknown",
+        "notes": "",
+        "gender": "Female",
+        "owned": true,
+        "ownership_type": "Seed Start",
+        "clone_count": 0,
+        "genetic_info": {}
+    },
+    "AJ Sour Diesel Clone D": {
+        "lineage": "Chemdog x Mass Super Skunk",
+        "yield": "1g",
+        "flowering_time": "10-11 wks",
+        "type": "Sativa hybrid",
+        "gender": "Female",
+        "owned": true,
+        "ownership_type": "Clone",
+        "genetic_info": {},
+        "notes": "Cloned from AJ Sour Diesel on 2024-12-25, Medium: Soil"
+    },
+    "Gorilla Glue #4 Clone G": {
+        "lineage": "Chems Sister x Sour Dubb x Chocolate Diesel",
+        "yield": "Unknown",
+        "flowering_time": "Unknown",
+        "type": "Unknown",
+        "gender": "Female",
+        "owned": true,
+        "ownership_type": "Clone",
+        "genetic_info": {},
+        "notes": "Cloned from Gorilla Glue #4 on 2024-12-25, Medium: Soil"
     }
 }

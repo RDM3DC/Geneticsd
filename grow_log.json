@@ -1,100 +1,105 @@
 [
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Gorilla Glue #4",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Gushers",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Jedi Kush #1",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Jedi Kush #2",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Jedi Kush #3",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Jupiter",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Legend OG",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Lemon Cherry Gelato",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Sugermill #1",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Sugermill #2",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "Tangelo Kush",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Mom",
-        "strain": "AJ Sour Diesel",
-        "notes": "",
-        "status": "Vegetative"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Pruned",
-        "strain": "Gorilla Glue #4 Clone F",
-        "notes": "",
-        "status": "Flowering"
-    },
-    {
-        "date": "2024-11-10",
-        "activity_type": "Fed Nutrients",
-        "strain": "Gorilla Glue #4 Clone F",
-        "notes": "",
-        "status": "Vegetative"
-    }
+  {
+    "date": "fhfhihsdakjfhlsKD2024-12-21 21:14:08",
+    "entry_type": "New Entry",
+    "data": "Sample data"
+  },
+  {
+    "date": "2024-12-25",
+    "strain": "Detroit Runtz",
+    "stage": "Flowering",
+    "activity_type": "Stage Change",
+    "notes": "",
+    "status": "Healthy"
+  },
+  {
+    "date": "2024-12-25",
+    "strain": "Detroit Runtz",
+    "stage": "Flowering",
+    "activity_type": "Stage Change",
+    "notes": "",
+    "status": "Healthy"
+  },
+  {
+    "date": "2024-12-25",
+    "strain": "RS11",
+    "stage": "Clone",
+    "activity_type": "Watered",
+    "notes": "",
+    "status": "Healthy"
+  },
+  {
+    "date": "2024-12-25",
+    "strain": "Kush Mints",
+    "stage": "Flowering",
+    "activity_type": "Pruned",
+    "notes": "",
+    "status": "Healthy"
+  },
+  {
+    "date": "2024-12-25",
+    "strain": "AJ Sour Diesel",
+    "stage": "Vegetation",
+    "activity_type": "Stage Change",
+    "notes": "",
+    "status": "Healthy"
+  },
+  {
+    "date": "2024-12-25",
+    "activity_type": "Cloned",
+    "strain": "AJ Sour Diesel Clone C",
+    "notes": "Clone created from AJ Sour Diesel, Medium: Soil",
+    "status": "Seedling"
+  },
+  {
+    "date": "2024-12-25",
+    "activity_type": "Cloned",
+    "strain": "Sugermill #2 Clone A",
+    "notes": "Clone created from Sugermill #2, Medium: Soil",
+    "status": "Seedling"
+  },
+  {
+    "date": "2024-12-25",
+    "activity_type": "Cloned",
+    "strain": "AJ Sour Diesel Clone C",
+    "notes": "Clone created from AJ Sour Diesel, Medium: Soil",
+    "status": "Clone"
+  },
+  {
+    "date": "2024-12-25",
+    "activity_type": "Cloned",
+    "strain": "Sugermill #2 Clone A",
+    "notes": "Clone created from Sugermill #2, Medium: Soil",
+    "status": "Clone"
+  },
+  {
+    "date": "2024-12-25",
+    "activity_type": "Cloned",
+    "strain": "AJ Sour Diesel Clone D",
+    "notes": "Clone created from AJ Sour Diesel, Medium: Soil",
+    "status": "Clone"
+  },
+  {
+    "date": "2024-12-25",
+    "strain": "AJ Sour Diesel Clone D",
+    "stage": "Vegetation",
+    "activity_type": "Stage Change",
+    "notes": "",
+    "status": "Healthy"
+  },
+  {
+    "date": "2024-12-25",
+    "strain": "Gorilla Glue #4",
+    "stage": "Vegetation",
+    "activity_type": "Stage Change",
+    "notes": "",
+    "status": "Healthy"
+  },
+  {
+    "date": "2024-12-25",
+    "activity_type": "Cloned",
+    "strain": "Gorilla Glue #4 Clone G",
+    "notes": "Clone created from Gorilla Glue #4, Medium: Soil",
+    "status": "Clone"
+  }
 ]

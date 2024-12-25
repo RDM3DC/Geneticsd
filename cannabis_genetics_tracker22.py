@@ -86,20 +86,14 @@ class CloneEntryDialog:
 
     def on_create(self):
         if not self.mother_plant.get():
-            messagebox.showerror("Error", "Please select a mother plant.")
+            messagebox.showerror("Error", "Please select a mother plant")
             return
-
+            
         self.clone_date = datetime.now().strftime('%Y-%m-%d')
-        mother_name = self.mother_plant.get()
+        self.mother_plant = self.mother_plant.get()
         self.medium = self.medium.get()
-        self.clone_id = f"{mother_name}-{self.get_next_clone_id()}"
+        self.clone_id = f"{self.mother_plant}-{self.get_next_clone_id()}"
         self.result = True
-        
-        # Call a new function in the main app to create and log the clone
-        parent_app = self.top.master.nametowidget(self.top.master.winfo_parent())
-        if hasattr(parent_app, 'app_instance'):
-            parent_app.app_instance.create_clone_in_plants(mother_name, self.clone_id, self.medium, self.clone_date)
-        
         self.top.destroy()
 
     def get_next_clone_id(self):
@@ -674,42 +668,31 @@ class CannabisGeneticsApp:
         self.edit_entry_notes.grid(row=8, column=1, sticky='we', padx=5, pady=5)
         self.edit_entry_notes.insert(0, details.get('notes', ''))
 
-        # Create a button frame that will always be visible
-        button_frame = tk.Frame(left_frame, bg=BACKGROUND_COLOR)
-        button_frame.pack(side='bottom', fill='x', pady=10)
-
-        # Add Clone Button (only if plant is owned and female)
-        if self.plant_genetics[plant_name].get('owned', True) and self.plant_genetics[plant_name].get('gender', '') == 'Female':
-            btn_clone = tk.Button(button_frame, text="Create Clone", 
-                                command=lambda: self.create_clone_dialog(plant_name),
-                                bg="white", fg="black", font=("Helvetica", 14, "bold"),
-                                activebackground="lightgrey", activeforeground="black")
-            btn_clone.pack(side='left', padx=5)
-
-        # Genetic Information Button (moved to button frame)
-        btn_genetic_info = tk.Button(button_frame, text="Genetic Information", 
-                                   command=lambda: self.open_genetic_info_window(plant_name),
-                                   bg="white", fg="black", font=("Helvetica", 14, "bold"),
-                                   activebackground="lightgrey", activeforeground="black")
-        btn_genetic_info.pack(side='left', padx=5)
-
-        # Save Changes Button
-        btn_save = tk.Button(button_frame, text="Save Changes", 
-                           command=lambda: self.update_plant_details(plant_name, details_window),
-                           bg="white", fg="black", font=("Helvetica", 14, "bold"),
-                           activebackground="lightgrey", activeforeground="black")
-        btn_save.pack(side='left', padx=5)
-
-        # Delete Button
-        btn_delete = tk.Button(button_frame, text="Delete", 
-                             command=lambda: self.delete_plant(plant_name, details_window),
-                             bg="white", fg="black", font=("Helvetica", 14, "bold"),
-                             activebackground="lightgrey", activeforeground="black")
-        btn_delete.pack(side='left', padx=5)
+        # Genetic Information Button
+        btn_genetic_info = tk.Button(left_frame, text="Genetic Information", command=lambda: self.open_genetic_info_window(plant_name),
+                                     bg="white", fg="black", font=("Helvetica", 14, "bold"),
+                                     activebackground="lightgrey", activeforeground="black")
+        btn_genetic_info.pack(pady=10)
 
         # Configure grid weights
         for i in range(2):
             edit_frame.columnconfigure(i, weight=1)
+
+        # Save Changes and Delete Buttons in left_frame
+        btn_frame = tk.Frame(left_frame, bg=BACKGROUND_COLOR)
+        btn_frame.pack(pady=20)
+
+        # Save Changes Button (Styled White with Black Text)
+        btn_save = tk.Button(btn_frame, text="Save Changes", command=lambda: self.update_plant_details(plant_name, details_window),
+                             bg="white", fg="black", font=("Helvetica", 14, "bold"),
+                             activebackground="lightgrey", activeforeground="black")
+        btn_save.pack(side='left', padx=20)
+
+        # Delete Button (Styled White with Black Text)
+        btn_delete = tk.Button(btn_frame, text="Delete", command=lambda: self.delete_plant(plant_name, details_window),
+                               bg="white", fg="black", font=("Helvetica", 14, "bold"),
+                               activebackground="lightgrey", activeforeground="black")
+        btn_delete.pack(side='right', padx=20)
 
         # Now, in the right_frame, display clones
         # Find clones of this mother
@@ -734,54 +717,6 @@ class CannabisGeneticsApp:
                     row += 1
         else:
             tk.Label(right_frame, text="No clones found.", bg=BACKGROUND_COLOR, fg=TEXT_COLOR, font=("Helvetica", 12)).pack(pady=10)
-
-    def create_clone_dialog(self, mother_name):
-        """Handle clone creation for a specific mother plant"""
-        # Create clone dialog
-        dialog = tk.Toplevel(self.root)
-        dialog.title(f"Create Clone from {mother_name}")
-        dialog.geometry("400x300")
-        dialog.configure(bg=BACKGROUND_COLOR)
-
-        # Growing Medium Selection
-        tk.Label(dialog, text="Growing Medium:", bg=BACKGROUND_COLOR, fg=TEXT_COLOR,
-                font=("Helvetica", 12)).pack(pady=5)
-        medium_var = tk.StringVar(value="Rockwool")
-        medium_menu = ttk.Combobox(dialog, textvariable=medium_var,
-                                 values=["Rockwool", "Soil", "Coco", "DWC", "Aeroponic"])
-        medium_menu.pack(pady=5)
-
-        # Notes
-        tk.Label(dialog, text="Notes:", bg=BACKGROUND_COLOR, fg=TEXT_COLOR,
-                font=("Helvetica", 12)).pack(pady=5)
-        notes_text = tk.Text(dialog, height=4)
-        notes_text.pack(pady=5)
-
-        def save_clone():
-            medium = medium_var.get()
-            notes = notes_text.get("1.0", "end-1c").strip()
-            clone_date = datetime.now().strftime('%Y-%m-%d')
-            
-            # Generate clone name
-            clone_count = self.plant_genetics[mother_name].get('clone_count', 0) + 1
-            clone_suffix = self.get_clone_suffix(clone_count)
-            clone_name = f"{mother_name} Clone {clone_suffix}"
-
-            # Create the clone
-            self.create_clone_in_plants(mother_name, clone_name, medium, clone_date)
-            
-            # Add notes if provided
-            if notes:
-                self.plant_genetics[clone_name]['notes'] = notes
-                self.save_genetics_data()
-
-            messagebox.showinfo("Success", f"Clone '{clone_name}' created successfully!")
-            dialog.destroy()
-
-        # Save Button
-        tk.Button(dialog, text="Create Clone", command=save_clone,
-                 bg="white", fg="black", font=("Helvetica", 14, "bold"),
-                 activebackground="lightgrey", activeforeground="black").pack(pady=20)
 
     def show_clone_grow_log(self, clone_name):
         # Load grow log data
@@ -1521,59 +1456,6 @@ class CannabisGeneticsApp:
             if column >= columns:
                 column = 0
                 row += 1
-
-    def create_clone_in_plants(self, mother_name, clone_name, medium, clone_date):
-        """
-        Copies key data from the mother plant, creates a new clone entry,
-        and logs the cloning in the grow log.
-        """
-        if mother_name not in self.plant_genetics:
-            return
-
-        mother_data = self.plant_genetics[mother_name]
-        new_clone_data = {
-            "lineage": mother_data.get('lineage', 'Unknown'),  # Inherit mother's lineage
-            "yield": mother_data.get('yield', 'Unknown'),
-            "flowering_time": mother_data.get('flowering_time', 'Unknown'),
-            "type": mother_data.get('type', 'Unknown'),
-            "gender": mother_data.get('gender', 'Unknown'),
-            "owned": True,
-            "ownership_type": "Clone",
-            "genetic_info": mother_data.get('genetic_info', {}),  # Also inherit genetic info
-            "notes": f"Cloned from {mother_name} on {clone_date}, Medium: {medium}"
-        }
-        
-        # Update clone count on mother plant
-        mother_data['clone_count'] = mother_data.get('clone_count', 0) + 1
-        
-        # Save the new clone data
-        self.plant_genetics[clone_name] = new_clone_data
-        self.save_genetics_data()
-
-        # Add a log entry for the cloning
-        if os.path.exists(GROW_LOG_FILE):
-            try:
-                with open(GROW_LOG_FILE, 'r') as file:
-                    grow_log = json.load(file)
-            except json.JSONDecodeError:
-                grow_log = []
-        else:
-            grow_log = []
-            
-        grow_log.append({
-            "date": clone_date,
-            "activity_type": "Cloned",
-            "strain": clone_name,
-            "notes": f"Clone created from {mother_name}, Medium: {medium}",
-            "status": "Clone"
-        })
-        
-        with open(GROW_LOG_FILE, 'w') as file:
-            json.dump(grow_log, file, indent=2)
-
-        # Refresh UI
-        self.update_search_results()
-        self.update_dropdown_options()
 
     @staticmethod
     def main():
